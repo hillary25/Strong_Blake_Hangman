@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="stickMan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 500" style="enable-background:new 0 0 200 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+</style>
+<line id="legRight" class="st0" x1="100.5" y1="144.5" x2="170.5" y2="268.5"/>
+<line id="legLeft" class="st0" x1="100.5" y1="143.5" x2="30.5" y2="267.5"/>
+<line id="armRight" class="st0" x1="100.5" y1="272.5" x2="159.5" y2="492.5"/>
+<line id="armLeft" class="st0" x1="100.5" y1="272.5" x2="41.5" y2="492.5"/>
+<g id="body">
+	<line class="st0" x1="100.5" y1="100.5" x2="100.5" y2="273"/>
+</g>
+<g id="head">
+	<path class="st1" d="M100,99c-26.5,0-48-21.5-48-48S73.5,3,100,3c26.5,0,48,21.5,48,48S126.5,99,100,99z"/>
+	<path d="M100,5c25.4,0,46,20.6,46,46s-20.6,46-46,46S54,76.4,54,51S74.6,5,100,5 M100,1C72.4,1,50,23.4,50,51s22.4,50,50,50
+		s50-22.4,50-50S127.6,1,100,1L100,1z"/>
+</g>
+</svg>
