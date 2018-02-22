@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*this class will hide elements on out page*/
+.hidden
+{
+	display: none;
+}
