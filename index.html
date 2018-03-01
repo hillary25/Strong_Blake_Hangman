@@ -7,18 +7,51 @@
 <title>Hangman!</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
 	<main id="container">
 		<h1>Hangman</h1>
-		<img id="bckgrd" src="assets/hangmanBckgrd.svg" width="1000" height="900">
-		<button id="startBut">Start Game</button>
-   <input type="text" class="user-guess">
-	  <button id="#myButton" class="init-button">Run init script</button>
-	</main>
+		
+		<div>
+		<p class="hint-string"></p>
+		</div>
 	
-	<script src="js/main.js"></script>	
+		<div>
+		<input id="userInput" type="text" class="user-guess">
+		<!-- <button class="init-button">Guess</button> -->
+		</div>
+
+		<div>
+			<svg id="stickMan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.48 492.02">
+				<defs>
+					<style>
+						.cls-1 {fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 4px;}
+					</style>
+				</defs>
+				<title>stickMan</title>
+				<line id="legRight" class="cls-1 wrong5" x1="71.74" y1="143.5" x2="141.74" y2="267.5"/>
+				<line id="legLeft" class="cls-1 wrong4" x1="71.74" y1="142.5" x2="1.74" y2="266.5"/>
+				<line id="armRight" class="cls-1 wrong3" x1="71.74" y1="271.5" x2="130.74" y2="491.5"/>
+				<line id="armLeft" class="cls-1 wrong2" x1="71.74" y1="271.5" x2="12.74" y2="491.5"/>
+				<line id="body" class="cls-1 wrong1" x1="71.74" y1="99.5" x2="71.74" y2="272"/>
+			  <path id="head" class="cls-1 wrong0" d="M100,5A46,46,0,1,1,54,51,46.06,46.06,0,0,1,100,5m0-4a50,50,0,1,0,50,50A50,50,0,0,0,100,1Z" transform="translate(-28.76 -1)"/>
+			</svg>
+		</div>
+
+		<div>
+			<i class="wrong-letters-label">You guessed these already: </i>
+			<p class="wrong-letters"></p>
+		</div>
+
+		<section class="reset-screen">
+			<h3>Gave over! You ran out of guesses</h3>
+			<button>Try again</button>
+		</section>
+
+
+	</main>
+
+	<script src="js/main.js"></script>
 </body>
 </html>
