@@ -12,14 +12,16 @@
 <body>
 	<main id="container">
 		<h1>Hangman</h1>
-		
+
 		<div>
 		<p class="hint-string"></p>
 		</div>
-	
-		<div>
-		<input id="userInput" type="text" class="user-guess">
-		<!-- <button class="init-button">Guess</button> -->
+
+		<div id="input">
+			<h2>Guess a letter here:</h2>
+			<p>(Make sure to backspace after each guess)</p>
+			<input id="userInput" type="text" class="user-guess" maxlength="1">
+			<!-- <button class="init-button">Guess</button> -->
 		</div>
 
 		<div>
@@ -39,7 +41,7 @@
 			</svg>
 		</div>
 
-		<div>
+		<div id="wrong">
 			<i class="wrong-letters-label">You guessed these already: </i>
 			<p class="wrong-letters"></p>
 		</div>

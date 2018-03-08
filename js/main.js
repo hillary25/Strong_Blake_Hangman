@@ -2,7 +2,7 @@
 	console.log('hangman script fired!');
 
 	//create an array to hold the words to be guessed (MDN => arrays, MDN const)
-	const  words = ["blue", "orange", "yellow", "magenta", "violet",];
+	const  words = ["apple", "orange", "strawberry", "pineapple", "grapes",];
 
 
 
@@ -12,10 +12,12 @@
 		wordHint = document.querySelector('.hint-string'),
 		guessBox = document.querySelector('#userInput'),
 		wrongGuesses = 0,
+		correctGuesses = 0,
 		resetScreen = document.querySelector('.reset-screen')
 		resetButton = resetScreen.querySelector('button'),
 		wrongLetterList = document.querySelector('.wrong-letters'),
-		wrongLetterArray = [];
+		wrongLetterArray = []
+		message = "";
 
 	function resetGame(){
 		//reset game and pick a new words
@@ -23,14 +25,14 @@
 		gamePieces.forEach(piece => piece.classList.remove('show-piece'));
 		wrongGuesses = 0;
 		guessBox.value = "";
-
+		wrongLetterList.textContent = "";
 		init();
 	}
 
-	function showResetScreen(){
+	function showResetScreen(message) {
 		//user has lost, reset stuff and start over
-		console.log('you lose, loser!')
 		resetScreen.classList.add('show-piece');
+		resetScreen.querySelector('h3').textContent = message;
 	}
 
 	function takeGuess() {
@@ -41,6 +43,8 @@
 		if (this.value === "" || this.value.length < 1) {
 			return;
 		}
+
+		let currentGuess = this.value;
 
 		//set up the win and lose paths (if/else)
 		if (!currentWord.includes(this.value)) {
@@ -56,7 +60,8 @@
 
 			if (wrongGuesses >= 5) {
 				//increment the wrongGuesses variable
-				showResetScreen();
+				showResetScreen(message = "You Lose");
+
 			} else {
 				//you lose, reset the game
 				wrongGuesses++;
@@ -64,6 +69,22 @@
 
 		} else {
 			//winning path
+			let matchAgainst = currentWord.split("");
+			var hintString = wordHint.textContent.split(" ");
+
+			matchAgainst.forEach((letter, index) => {
+				if(letter === currentGuess) {
+					hintString[index] = currentGuess;
+					correctGuesses++;
+				}
+			});
+
+			wordHint.textContent = "";
+			wordHint.textContent = hintString.join(" ");
+
+			if (correctGuesses === currentWord.length){
+				showResetScreen(message = "You Win");
+			}
 		}
 	}
 
